@@ -13,6 +13,7 @@
 	<thead class="thead-dark">
 		<th>Название</th>
 		<th>Цена</th>
+		<th>Количество</th>
 		<th>Изображение</th>
 		<th></th>
 	</thead>
@@ -31,6 +32,7 @@
 						</a>
 					</td>
 					<td >{{ $w->price }}</td>
+					<td><input name="quantity" type = "number" min=1 max=10></td>
 					<td><img style="width:200px; height:auto;"src="{{ asset($w->image) }}"></td>
 					<td><button type="submit">В корзину</button></td>		
 				</tr>

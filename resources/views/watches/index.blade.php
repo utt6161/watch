@@ -33,6 +33,7 @@
 				<input name="name" type="hidden" value="{{ $w->name }}">
 				<input name="price" type="hidden" value="{{ $w->price }}">
 				<input name="image" type="hidden" value="{{ $w->image }}">
+				<input name="quantity" type="hidden" value=1>
 				<tr>
 					<td>
 						<a href="{{ route('watches.view',['id'=>$w->id]) }}">

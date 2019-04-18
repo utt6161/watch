@@ -59,7 +59,7 @@ class ShoppingCart extends Controller
                                             'id' => $request->id,
                                             'name' => $request->name,
                                             'price' => $request->price,
-                                            'quantity' => 1,
+                                            'quantity' => $request->quantity,
                                             'attributes' => array(
                                                 'image' => $request->image
                                             )
@@ -95,7 +95,7 @@ class ShoppingCart extends Controller
                                  'quantity'=>$c->quantity,
                                  'name'=>$user->name,
                                  'email'=>$user->email, 
-                                 'phone'=>"00"]);
+                                 'phone'=>$user->phone]);
         }
         Cart::session($user->name)->clear();
         $cart = Cart::session($user->name)->getContent();
